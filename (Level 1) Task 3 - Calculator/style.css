@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background-color: #236576;
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto )repeat(5, 90px);
+}
+
+.grid > button{
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(176, 162, 159, 0.75) ;
+}
+
+.grid > button:hover{
+    background-color: rgba(176, 162, 159, 0.9) 
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-around;
+    padding: 10px ;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.output .previousOperation{
+    color: gray;
+    font-size: 24px;
+}
+
+.output .currentOperation{
+    color: white;
+    font-size: 35px;
+}
